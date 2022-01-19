@@ -12,7 +12,7 @@ export default class Movies extends Component {
 
     // execute des que le composant est rendu
     componentDidMount(){
-        fetch("http://localhost:4000/v1/moviesx")
+        fetch("http://localhost:4000/v1/movies")
         // .then((response) => response.json())
         .then((response) =>{
             console.log("Status code is", response.status);
