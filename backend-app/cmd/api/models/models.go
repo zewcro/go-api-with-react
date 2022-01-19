@@ -6,7 +6,6 @@ import (
 )
 
 // Models is the wrapper for database
-
 type Models struct {
 	DB DBModel
 }
@@ -30,7 +29,7 @@ type Movie struct {
 	MPAARATING  string       `json:"mpaa_rating"`
 	CreatedAt   time.Time    `json:"created_at"`
 	UpdatedAt   time.Time    `json:"updated_at"`
-	MovieGenre  []MovieGenre `json:"-"`
+	MovieGenre  []MovieGenre `json:"genres"`
 }
 
 // Genre is the type for genre
