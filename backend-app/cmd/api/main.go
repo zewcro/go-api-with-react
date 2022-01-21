@@ -1,7 +1,7 @@
 package main
 
 import (
-	"backend/cmd/api/models"
+	"backend/models"
 	"context"
 	"database/sql"
 	"flag"
@@ -50,7 +50,6 @@ func main() {
 	if err != nil {
 		logger.Fatal(err)
 	}
-
 	defer db.Close()
 
 	app := &application{
@@ -67,7 +66,7 @@ func main() {
 		WriteTimeout: 30 * time.Second,
 	}
 
-	logger.Println("Starting server on port :", cfg.port)
+	logger.Println("Starting server on port", cfg.port)
 
 	err = srv.ListenAndServe()
 	if err != nil {

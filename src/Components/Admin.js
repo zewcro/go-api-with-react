@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default class Admin extends Component {
-
-    render (){
-        return (
-            <h2>Manage catalogue</h2>
+    
+    render() {
+        return(
+            <h2>Manage Catalogue</h2>
         );
     }
 }
